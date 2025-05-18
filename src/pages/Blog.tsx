@@ -52,16 +52,16 @@ const Blog = () => {
       <Navbar />
       
       <main className="flex-1 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="max-w-3xl mb-12">
-          <h1 className="text-4xl font-bold mb-4">A little this and a little that.</h1>
-          <p className="text-nelson-dark-500 text-lg">A peek inside my innie's brain.</p>
+        <div className="max-w-3xl mb-10">
+          <h1 className="text-3xl font-bold mb-2">A little this and a little that.</h1>
+          <p className="text-nelson-dark-500 text-base">A peek inside my innie's brain.</p>
         </div>
         
         <div className="mb-8 flex flex-wrap gap-2">
           {categories.map(category => (
             <button
               key={category}
-              className={`px-4 py-2 rounded-full text-sm font-medium ${
+              className={`px-3 py-1.5 rounded-full text-sm font-medium ${
                 activeCategory === category 
                   ? 'bg-black text-white' 
                   : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
@@ -73,7 +73,7 @@ const Blog = () => {
           ))}
         </div>
         
-        <div className="space-y-12">
+        <div className="space-y-10">
           <BlogCard {...blogPosts[0]} featured={true} />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
